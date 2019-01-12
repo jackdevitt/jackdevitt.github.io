@@ -1,1 +1,0 @@
-# jackdevitt.github.io
