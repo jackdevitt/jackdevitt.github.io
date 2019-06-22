@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-<title>Jack Devitt</title>
+<title>JackDevitt.com</title>
 <meta charset="utf-8"
 <meta name="viewport" content="width=device-width, inital-scale=1">
 <style>
@@ -17,9 +17,10 @@ body {
 /* Style the header */
 header {
   background-color: rgb(175, 175, 175);
-  padding: 10px;
+  padding: 5px;
   text-align: center;
-  font-size: 35px;
+  vertical-align: middle;
+  font-size: 15px;
   color:black;
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
@@ -27,15 +28,21 @@ header {
   width: 100%; /* Full width */
 }
 
+div {
+    width: 100%;
+    float: left;
+}
+
 menu {
+    align-self: center;
+    float: left;
     width: 10%;
     background-color: #797575;
     padding: 3px;
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     color: black;
     overflow: hidden;
-    float: left;
     border-width:2px;
     border-style:solid;
     border-color:lightblue;
@@ -47,11 +54,13 @@ menu:hover {
 
 /* Create two columns/boxes that floats next to each other */
 nav {
+  align-self: center;
+  overflow: hidden;
   float: left;
-  width: 20%;
-  height: 300px; /* only for demonstration, should be removed */
+  width: 100%;
+  height: 80px; /* only for demonstration, should be removed */
   background: #ccc;
-  padding: 10px;
+  padding: 5px;
 }
 
 /* Style the list inside the menu */
@@ -61,7 +70,7 @@ nav ul {
 }
 
 section {
-    margin-top: 270px;
+    margin-top: 140px;
 }
 
 article {
@@ -70,7 +79,7 @@ article {
     width: 33.3%;
     background-color: #797575;
     height: 200px;
-    padding: 5pt
+    padding: 5pt;
     border-width:10px;
     border-style:solid;
     border-color:lightblue;
@@ -109,13 +118,15 @@ footer {
 </head>
 <body bgcolor="lightblue">
     <header>
-        <b> <p>JackDevitt.Com</p> </b>
-        <menu>Menu1</menu>
-        <menu>Menu2</menu>
-        <menu>Menu3</menu>
-        <menu>Menu4</menu>
-        <menu>Menu5</menu>
+        <img src="images/jackdevittlogov2.png" alt="Jack Devitt" height="13%" width="13%">
     </header>
+
+    <nav>
+        <menu>Projects</menu>
+        <menu>Certifications</menu>
+        <menu>Support</menu>
+        <menu>About Us</menu>
+    </nav>
 
     <section>
 
