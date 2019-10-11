@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="PigGameCSS.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label" id="label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box" id="box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+
+            <div class='inst-panel'>
+                <div class='text' id='text'>You may roll as much as you like per turn. However when if you roll a 1 your Round Score is removed and your turn is over. However, you may hold and add your Round Score to your Global Score. The first to 100 points wins!</div>
+            </div>
+
+            <div class='ach-99-panel'>
+                <div class='ach-99' id='ach-99'>97..98..99</div>
+                <div class='ach-99-label' id='ach-99-label'>Achieve a Global score of 99</div>
+            </div>
+
+            <div class='ach-99-panel-done'>
+                <div class='ach-99-done-img' id='ach-99-done-img'>97..98..99</div>
+                <div class='ach-99-done-label' id='ach-99-done-label'>Achieve a Global score of 99</div>
+                <div class='ach-99-done-message' id='ach-99-done-message'>DONE!</div>
+            </div>
+
+            <div class='ach-50-panel'>
+                <div class='ach-50-title' id='ach-50-title'>Risk</div>
+                <div class='ach-50-label' id='ach-50-label'>Achieve a Current score of 50 or higher</div>
+            </div>
+
+            <div class='ach-50-panel-done'>
+                <div class='ach-50-title-done' id='ach-50-title-done'>Risk</div>
+                <div class='ach-50-label-done' id='ach-50-label-done'>Achieve a Current score of 50 or higher</div>
+                <div class='ach-50-done-message' id='ach-50-done-message'>DONE!</div>
+            </div>
+
+            <div>
+                <div class='roll-1' id='roll-1'>You rolled a 1!</div>
+            </div>
+
+            <button class='btn-reset'><i class='ion-ios-minus-outline'></i>RESET</button>
+            <button class='btn-ai'><i class='ion-trophy'></i>Achievments</button>
+            <button class="btn-back"><i class="ion-ios-arrow-back"></i>Back</button>
+            <button class="btn-inst"><i class="ion-ios-folder-outline"></i>Instructions</button>
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+        </div>
+        
+        <script src="PigGameJS.js"></script>
+    </body>
+</html>
