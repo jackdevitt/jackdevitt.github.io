@@ -10,7 +10,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         var dice = Math.floor(Math.random() * 6) + 1;
         var diceDOM = document.querySelector('.dice')
         diceDOM.style.display = 'block';
-        diceDOM.src = 'dice-' + dice + '.png';
+        diceDOM.src = 'images/dice-' + dice + '.png';
     
         if (dice !== 1) {
             roundScore += dice;
@@ -177,11 +177,6 @@ document.querySelector('.btn-reset').addEventListener('click', function () {
     document.querySelector('.ach-99-panel-done').style.display = 'none';
     document.querySelector('.ach-50-panel').style.display = 'block';
     document.querySelector('.ach-50-panel-done').style.display = 'none';
-    showAch();
+    ach50 = true;
+    ach99 = true;
 })
-
-function showAch () {
-    document.querySelector('.ach-99-panel-done').style.display = 'none';
-    document.querySelector('.ach-99-panel').style.display = 'block';
-}
-
