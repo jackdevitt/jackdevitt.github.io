@@ -1,0 +1,367 @@
+/*GENERAL*/
+
+body {
+  background-image: url('images/jackdevittback.jpg');  
+  margin: 0px;
+}
+.head {
+  background-color: grey;
+  border-style: solid;
+  border-width: 5%;
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+  color:black;
+  position: fixed; 
+  top: 0; 
+  right: 0;
+  width: 100%; 
+  height: 100px;
+  z-index: 99;
+}
+
+footer {
+  background-color: grey;
+  width: 99.6%;
+  height: 4%;
+  position: absolute;
+  top: 1080px;
+  text-align: center;
+  border-style: solid;
+  border-width: 3px;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+button:hover {
+  text-emphasis: bold;
+}
+
+/*HEADERS*/
+
+.featured-label {
+  font-size: 30px;
+  text-align: center;
+  border-style: solid;
+  border-width: 5%;
+  left: 24%;
+  background-color: grey;
+  width: 50%;
+  height: 5%;
+  top: 200px;
+  position: absolute;
+}
+
+.link {
+  width: 100%;
+  height: 100%;
+}
+
+.link-label {
+  font-size: 30px;
+  text-align: center;
+  border-style: solid;
+  border-width: 5%;
+  left: 24%;
+  background-color: grey;
+  width: 50%;
+  height: 5%;
+  top: 600px;
+  position: absolute;
+}
+
+.aboutmelabel {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutme {
+  font-size: 30px;
+  text-align: center;
+  border-style: solid;
+  border-width: 5%;
+  left: 24%;
+  background-color: grey;
+  width: 50%;
+  height: 5%;
+  top: 150px;
+  position: absolute;
+}
+
+.aboutme-label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border-style: solid;
+  border-width: 3px;
+  position: absolute;
+  background-color: grey;
+  left: 24%;
+  top: 225px;
+  width: 50%;
+  height: 50%;
+}
+
+.featured {
+  width: 100%;
+  height: 100%;
+}
+/*PIG APP*/
+
+.app-pig {
+  left: 10%;
+  position: absolute;
+  top: 300px;
+  width: 10%;
+  height: 20%;
+}
+
+.app-pig-click {
+  left: 43%;
+  position: absolute;
+  top: 220px;
+  width: 12%;
+  height: 22%;
+  border-style: solid;
+  border-width: 3px;
+}
+
+.app-pig-confirm {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  background-color: lightslategrey;
+  text-align: center;
+  left: 44%;
+  position: absolute;
+  top: 400px;
+  width: 10%;
+  height: 15%;
+}
+
+.app-pig-label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  text-align: center;
+  background-color: lightslategrey;
+  left: 10%;
+  position: absolute;
+  top: 460px;
+  width: 10%;
+  height: 8%;
+}
+
+/*CALCULATOR APP*/
+
+.app-cal {
+  left: 44%;
+  position: absolute;
+  top: 300px;
+  width: 10%;
+  height: 20%;
+}
+
+.app-cal-label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  text-align: center;
+  background-color: lightslategrey;
+  left: 44%;
+  position: absolute;
+  top: 460px;
+  width: 10%;
+  height: 8%;
+}
+
+.app-cal-click {
+  left: 43%;
+  position: absolute;
+  top: 220px;
+  width: 12%;
+  height: 22%;
+  border-style: solid;
+  border-width: 3px;
+}
+
+.app-cal-confirm {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  background-color: lightslategrey;
+  text-align: center;
+  left: 44%;
+  position: absolute;
+  top: 400px;
+  width: 10%;
+  height: 15%;
+}
+
+/*BUDGET APP*/
+
+.app-bud {
+  
+  left: 80%;
+  position: absolute;
+  top: 300px;
+  width: 10%;
+  height: 20%;
+}
+
+.app-bud-label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  text-align: center;
+  background-color: lightslategrey;
+  left: 80%;
+  position: absolute;
+  top: 460px;
+  width: 10%;
+  height: 8%;
+}
+
+.app-bud-click {
+  left: 43%;
+  position: absolute;
+  top: 220px;
+  width: 12%;
+  height: 22%;
+  border-style: solid;
+  border-width: 3px;
+}
+
+.app-bud-confirm {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  background-color: lightslategrey;
+  text-align: center;
+  left: 44%;
+  position: absolute;
+  top: 400px;
+  width: 10%;
+  height: 15%;
+}
+
+/*GIT LINK*/
+.link-git {
+  background-color: white;
+  left: 20.2%;
+  position: absolute;
+  top: 700px;
+  width: 10%;
+  height: 20%;
+}
+
+.link-git-label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  text-align: center;
+  background-color: lightslategrey;
+  left: 20%;
+  position: absolute;
+  top: 870px;
+  width: 10%;
+  height: 8%;
+}
+
+.link-git-click {
+  background-color: white;
+  left: 43%;
+  position: absolute;
+  top: 220px;
+  width: 12%;
+  height: 22%;
+  border-style: solid;
+  border-width: 3px;
+}
+
+.link-git-confirm {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  background-color: lightslategrey;
+  text-align: center;
+  left: 44%;
+  position: absolute;
+  top: 400px;
+  width: 10%;
+  height: 15%;
+}
+
+/*GMAIL LINK*/
+
+.link-gmail {
+  background-color: white;
+  left: 68%;
+  position: absolute;
+  top: 700px;
+  width: 10%;
+  height: 20%;
+}
+
+.link-gmail-label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  text-align: center;
+  background-color: lightslategrey;
+  left: 68%;
+  position: absolute;
+  top: 870px;
+  width: 10%;
+  height: 8%;
+}
+
+.link-gmail-click {
+  background-color: white;
+  left: 43%;
+  position: absolute;
+  top: 220px;
+  width: 12%;
+  height: 22%;
+  border-style: solid;
+  border-width: 3px;
+}
+
+.link-gmail-confirm {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-style: solid;
+  border-width: 3px;
+  background-color: lightslategrey;
+  text-align: center;
+  left: 44%;
+  position: absolute;
+  top: 400px;
+  width: 10%;
+  height: 15%;
+}
+
+/*PAGE BUTTONS*/
+
+.btn-page1 {
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  top: 1000px;
+  left: 43%;
+}
+.btn-page2 {
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  top: 1000px;
+  left: 52%;
+}
