@@ -3,9 +3,17 @@ init()
 function topFunction() {
     document.body.scrollTop = 0; 
     document.documentElement.scrollTop = 0; 
-  }
+    document.querySelector('.btn-top').style.display = 'none';
+}
+
+function buttonShow () {
+    if (document.body.scrollTop >= 300) {
+        document.querySelector('.btn-top').style.display = 'block';
+    }
+}
 
 function init () {
+    topFunction()
     document.querySelector('.app-pig-click').style.display = 'none';
     document.querySelector('.app-pig-confirm').style.display = 'none';
     document.querySelector('.app-cal-click').style.display = 'none';

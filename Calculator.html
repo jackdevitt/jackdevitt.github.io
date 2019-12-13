@@ -2,14 +2,56 @@
 <html>
 <head>
 <title>Calculator</title>
+<style>
+body {
+        background-color: skyblue;
+}
+.input1 {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: absolute;
+        text-align: center;
+        top: 175px;
+        left: 30%;
+        width: 10%;
+        height: 5%;
+}
+
+.input2 {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: absolute;
+        text-align: center;
+        top: 175px;
+        left: 55%;
+        width: 10%;
+        height: 5%;
+}
+</style>
 </head>
 <body>
 <div class = 'input1'>
+        <input method = 'get' name = 'input-field1' action = 'CalculatorAnswers.html'>
         <form>Input 1</form>
+        </input>
 </div>
 <div class = 'input2'>
+        <input method = 'get' name = 'input-field2' action = 'CalculatorAnswers.html'>
         <form>Input 2</form>
+        </input>        
 </div>
-<script src = 'CalculatorJS.js'></script>
+
+<div class ='sub-btn'>
+        <button action = 'CalculatorAnswers.html'>SUBMIT</button>
+</div>
+
+<script>
+var input1, input2
+document.querySelector('.sub-btn').addEventListener('click', Calculate)
+function Calculate () {
+        input1 = document.querySelector('input-field1')
+        input2 = document.querySelector('input-field2')
+        console.log(input1, input2)
+}
+
+</script>
 </body>
 </html>
