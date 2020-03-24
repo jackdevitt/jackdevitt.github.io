@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Test</title>
+
+<style>
+
+.timer {
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(10);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class = 'timer'>
+    <p>0.0</p>
+</div>
+
+<script>
+
+function changeTime() {
+    document.querySelector('.timer').textContent =+ 0.1;
+}
+</script>
+
+</body>
+</html>
