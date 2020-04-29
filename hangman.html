@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Hangman</title>
+
+
+
+<style>
+
+.hangman {
+    position: absolute;
+    width: 60%;
+    height: 85%;
+    left: 500px;
+    bottom: 30px;
+}
+
+.hangmanwin {
+    position: absolute;
+    width: 60%;
+    height: 85%;
+    left: 500px;
+    bottom: 30px;
+}
+
+.instructions {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    background-color: grey;
+    border-style: solid;
+    border-width: 3px;
+    left: 310px;
+    top: 550px;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 98.5%;
+    left: -1px;
+}
+
+button {
+    background-color: grey;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+
+.a {
+    position: absolute;
+    left: 200px;
+    top: 250px;
+}
+
+.b {
+    position: absolute;
+    left: 260px;
+    top: 250px;
+}
+
+.c {
+    position: absolute;
+    left: 320px;
+    top: 250px;
+}
+
+.d {
+    position: absolute;
+    left: 380px;
+    top: 250px;
+}
+
+.e {
+    position: absolute;
+    left: 440px;
+    top: 250px;
+}
+
+.f {
+    position: absolute;
+    left: 500px;
+    top: 250px;
+}
+
+.g {
+    position: absolute;
+    left: 560px;
+    top: 250px;
+}
+
+.h {
+    position: absolute;
+    left: 620px;
+    top: 250px;
+}
+
+.h {
+    position: absolute;
+    left: 620px;
+    top: 250px;
+}
+
+.i {
+    position: absolute;
+    left: 680px;
+    top: 250px;
+}
+
+.j {
+    position: absolute;
+    left: 200px;
+    top: 310px;
+}
+
+.k {
+    position: absolute;
+    left: 260px;
+    top: 310px;
+}
+
+.l {
+    position: absolute;
+    left: 320px;
+    top: 310px;
+}
+
+.m {
+    position: absolute;
+    left: 380px;
+    top: 310px;
+}
+
+.n {
+    position: absolute;
+    left: 440px;
+    top: 310px;
+}
+
+.o {
+    position: absolute;
+    left: 500px;
+    top: 310px;
+}
+
+.p {
+    position: absolute;
+    left: 560px;
+    top: 310px;
+}
+
+.q {
+    position: absolute;
+    left: 620px;
+    top: 310px;
+}
+
+.r {
+    position: absolute;
+    left: 680px;
+    top: 310px;
+}
+
+.s {
+    position: absolute;
+    left: 230px;
+    top: 370px;
+}
+
+.t {
+    position: absolute;
+    left: 290px;
+    top: 370px;
+}
+
+.u {
+    position: absolute;
+    left: 350px;
+    top: 370px;
+}
+
+.v {
+    position: absolute;
+    left: 410px;
+    top: 370px;
+}
+
+.w {
+    position: absolute;
+    left: 470px;
+    top: 370px;
+}
+
+.x {
+    position: absolute;
+    left: 530px;
+    top: 370px;
+}
+
+.y {
+    position: absolute;
+    left: 590px;
+    top: 370px;
+}
+
+.z {
+    position: absolute;
+    left: 650px;
+    top: 370px;
+}
+
+.correct {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    background-color: grey;
+    border-style: solid;
+    border-width: 3px;
+    left: 310px;
+    top: 550px;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.incorrect {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    background-color: grey;
+    border-style: solid;
+    border-width: 3px;
+    left: 310px;
+    top: 550px;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.puzzle-1 {
+    position: absolute;
+    background-color: grey;
+    border-style: solid;
+    border-width: 3px;
+    width: 300px;
+    height: 70px;
+    left: 310px;
+    top: 50px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+
+.puzzle-2 {
+    position: absolute;
+    background-color: grey;
+    border-style: solid;
+    border-width: 3px;
+    width: 300px;
+    height: 70px;
+    left: 310px;
+    top: 50px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+
+.puzzle-3 {
+    position: absolute;
+    background-color: grey;
+    border-style: solid;
+    border-width: 3px;
+    width: 300px;
+    height: 70px;
+    left: 310px;
+    top: 50px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.puzzle-4 {
+    position: absolute;
+    background-color: grey;
+    border-style: solid;
+    border-width: 3px;
+    width: 300px;
+    height: 70px;
+    left: 310px;
+    top: 50px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.lost {
+    position: absolute;
+    background-color: grey;
+    border-style: solid;
+    border-width: 3px;
+    width: 300px;
+    height: 50px;
+    left: 310px;
+    top: 300px;
+    font-size: 25px;
+}
+
+.win {
+    position: absolute;
+    background-color: grey;
+    border-style: solid;
+    border-width: 3px;
+    width: 300px;
+    height: 50px;
+    left: 310px;
+    top: 300px;
+    font-size: 25px;
+}
+
+.again {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    left: 310px;
+    top: 370px;
+    font-size: 25px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<p2 class = 'puzzle1'></p2>
+
+<img src = 'images/meadow.jpg' class = 'background'>
+
+<center><p1 class = 'instructions'>Guess a letter to start!</p1></center>
+
+<img class = 'hangman'>
+
+<img class = 'hangmanwin' src = 'images/hangman7.png'>
+
+<button class = 'a'>A</button>
+
+<button class = 'b'>B</button>
+
+<button class = 'c'>C</button>
+
+<button class = 'd'>D</button>
+
+<button class = 'e'>E</button>
+
+<button class = 'f'>F</button>
+
+<button class = 'g'>G</button>
+
+<button class = 'h'>H</button>
+
+<button class = 'i'>I</button>
+
+<button class = 'j'>J</button>
+
+<button class = 'k'>K</button>
+
+<button class = 'l'>L</button>
+
+<button class = 'm'>M</button>
+
+<button class = 'n'>N</button>
+
+<button class = 'o'>O</button>
+
+<button class = 'p'>P</button>
+
+<button class = 'q'>Q</button>
+
+<button class = 'r'>R</button>
+
+<button class = 's'>S</button>
+
+<button class = 't'>T</button>
+
+<button class = 'u'>U</button>
+
+<button class = 'v'>V</button>
+
+<button class = 'w'>W</button>
+
+<button class = 'x'>X</button>
+
+<button class = 'y'>Y</button>
+
+<button class = 'z'>Z</button>
+
+<button class = 'again'>Play Again</button>
+
+<center><p class = 'correct'>Correct</p></center>
+
+<center><p class = 'incorrect'>Incorrect</p></center>
+
+<center><div class='puzzle-1'>_______ ___ ___ ______</div></center>
+<center><div class='puzzle-2'>___ ___ ______ ____ ___ ____</div></center>
+<center><div class='puzzle-3'>_____ ____ __ __ ___</div></center>
+<center><div class='puzzle-4'>___ ______ ___ _ ____ ___ ____</div></center>
+
+<center><div class = 'lost'>You Lose</div></center>
+
+
+<center><div class = 'win'>You Win</div></center>
+
+
+<script src = 'hangmanjs.js'>
+</script>
+
+</body>
+
+</html>
