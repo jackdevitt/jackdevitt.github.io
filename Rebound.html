@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rebound Simulation</title>
+<style>
+.ball {
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    left: 730px;
+    top: 365px;;
+}
+.backsplash {
+    position: absolute;
+    background-color: grey;
+    opacity: 0.5;
+    height: 722px;
+    width: 180px;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+.filler {
+    position: absolute;
+    background-color: grey;
+    opacity: 0.5;
+    height: 722px;
+    width: 180px;
+    top: 0%;
+    right: 0%;
+    z-index: -1;
+}
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.sizeslidecontainer {
+    position: absolute;
+}
+
+.velocityslidecontainer {
+    position: absolute;
+}
+
+.frictionslidecontainer {
+    position: absolute;
+}
+
+.background {
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    bottom: -460px;
+    left: 180px;
+    height: 730px;
+    width: 1160px;
+    z-index: -1;
+}
+.x {
+    position: absolute;
+    top: 480px;
+}
+.y {
+    position: absolute;
+    top: 500px;
+}
+</style>
+</head>
+<body>
+<img class = 'ball' src = 'images/Rebound.png' alt = 'Ball' width = '100%' height = '100%'>
+<button class = 'default'>Restore to Default</button>
+<div class = 'backsplash'></div>
+<div class = 'filler'></div>
+<div class="velocityslidecontainer">
+    <p class = 'velocityvalue'>Speed:</p>
+    <input type="range" min="1" max="50" value="20" class = 'velocityslider'>
+<div class="frictionslidecontainer">
+    <p class = 'frictionvalue'>Speed:</p>
+    <input type="range" min="1" max="20" value="10" class = 'frictionslider'>
+<div class="sizeslidecontainer">
+    <p class = 'sizevalue'>Speed:</p>
+    <input type="range" min="1" max="75" value="25" class = 'sizeslider'>
+<div class = 'background'></div>
+<div class = 'x'>X-Pos: 730px</div>
+<div class = 'y'>Y-Pos: 365px</div>
+<script>
+var x,y;
+x = 730
+y = 365
+var originalvelocity, originalfriction, originalsize
+var velocityslider = document.querySelector('.velocityslider');
+var velocityoutput = document.querySelector('.velocityvalue');
+velocityoutput.innerHTML = 'Velocity: ' + velocityslider.value;
+originalvelocity = velocityslider.value 
+velocityslider.oninput = function() {
+    velocityoutput.innerHTML = 'Velocity: ' + this.value;
+}
+var frictionslider = document.querySelector('.frictionslider');
+var frictionoutput = document.querySelector('.frictionvalue');
+frictionoutput.innerHTML = 'Friction: ' + frictionslider.value;
+originalfriction = frictionslider.value
+frictionslider.oninput = function() {
+    frictionoutput.innerHTML = 'Friction: ' + this.value;
+}
+var sizeslider = document.querySelector('.sizeslider');
+var sizeoutput = document.querySelector('.sizevalue');
+sizeoutput.innerHTML = 'Size: ' + sizeslider.value; 
+originalsize = sizeslider.value
+sizeslider.oninput = function() {
+    sizeoutput.innerHTML = 'Size: ' + this.value;
+    leftball = document.querySelector('.ball').style.left
+    document.querySelector('.ball').style.width = this.value*2 + 'px';
+    document.querySelector('.ball').style.height = this.value*1.8 + 'px';
+}
+document.querySelector('.default').addEventListener('click', function() {
+    velocityslider.value = originalvelocity;
+    sizeslider.value = originalsize;
+    frictionslider.value = originalfriction;
+    velocityoutput.innerHTML = 'Velocity: ' + originalvelocity;
+    frictionoutput.innerHTML = 'Friction: ' + originalfriction;
+    sizeoutput.innerHTML = 'Size: ' + originalsize;
+    document.querySelector('.ball').style.width = originalsize*2 + 'px';
+    document.querySelector('.ball').style.height = originalsize*1.8 + 'px';
+})
+var velocityactual
+
+function recall() {
+    setTimeout(function(){
+        if (x > 800) {
+            velocityactual = velocityslider.value * -1
+        }
+        document.querySelector('.ball').style.left = x + velocityactual - frictionslider.value + 'px';}, 100);
+    BallMove();
+}
+
+function BallMove () {
+    console.log(originalvelocity)
+    setTimeout(function(){
+        if (x > 800) {
+            velocityactual = velocityslider.value * -1
+        }
+        document.querySelector('.ball').style.left = x + velocityactual - frictionslider.value + 'px';}, 100);
+    recall();
+}
+
+
+
+document.addEventListener('DOMContentLoaded', BallMove)
+
+
+</script>
+</body>
+</html>

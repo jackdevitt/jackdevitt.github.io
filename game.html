@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.playerslidecontainer {
+    position: absolute;
+    left: 45.5%;
+    top: 14%;
+}
+.aislidecontainer {
+    position: absolute;
+    left: 45.5%;
+    top: 50%;
+}
+.player-title {
+    font-size: 20px;
+}
+.ai-title {
+    font-size: 20px;
+}
+.intro-pidgeon-1 {
+    position: absolute;
+    top: 30%;
+    width: 60px;
+    left: 40.5%;
+    z-index: 2;
+}
+.intro-pidgeon-2 {
+    position: absolute;
+    top: 30%;
+    width: 60px;
+    left: 45%;
+    z-index: 2;
+}
+.intro-pidgeon-3 {
+    position: absolute;
+    top: 30%;
+    width: 60px;
+    left: 50%;
+    z-index: 2;
+}
+.intro-pidgeon-4 {
+    position: absolute;
+    top: 30%;
+    width: 60px;
+    left: 54%;
+    z-index: 2;
+}
+.ai-pidgeon-1 {
+    position: absolute;
+    top: 65%;
+    width: 60px;
+    left: 45%;
+    z-index: 2;
+}
+.ai-pidgeon-2 {
+    position: absolute;
+    top: 65%;
+    width: 60px;
+    left: 50%;
+    z-index: 2;
+}
+.intro-image {
+    position: absolute;
+    left: 70px;
+    top: -5px;
+    width: 1400px;
+    height: 726px;
+}
+.start-button {
+    position: absolute;
+    width: 310px;
+    height: 115px;
+    left: 30%;
+    bottom: 200px;
+}
+.countinue-button {
+    position: absolute;
+    width: 75px;
+    height: 50px;
+    bottom: 100px;
+    left: 47%;
+}
+.backsplash {
+    position: absolute;
+    width: 1536px;
+    height: 721px;
+    z-index: -2;
+    background-color: #82c9d4;
+    left: 0px;
+    top: -16px;
+}
+.backsplash-2 {
+    position: absolute;
+    width: 1300px;
+    height: 721px;
+    z-index: -1;
+    background-color: white;
+    left: 113px;
+    top: -16px;
+}
+.board {
+    position: absolute;
+    width: 1200px;
+    height: 630px;
+    left: 150px;
+    top: 50px;
+}
+.instructions-button {
+    position: absolute;
+    z-index: 1;
+    left: 27%;
+    bottom: 50px;
+    height: 130px;
+
+}
+button {
+    background: none;
+    border: none;
+}
+.instructions {
+    position: absolute;
+    left: 70px;
+    top: -5px;
+    width: 1400px;
+    height: 726px;   
+}
+.back {
+    position: absolute;
+    left: 150px;
+    bottom: 80px;
+    z-index: 1;
+}
+.roll {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    right: 30px;
+}
+.turn {
+    position: absolute;
+    font-size: 50px;
+    left: 100px;
+    top: -40px;
+    z-index: 2;
+    background-color: lightgrey;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="playerslidecontainer">  
+  <p class = 'player-title'>Number of Players:</p>
+  <input type="range" min="1" max="4" value="1" class="player-slider" onchange='findplayer()'>
+</div>
+
+<div class="aislidecontainer">  
+    <p class = 'ai-title'>Number of AI:</p>
+    <input type="range" min="0" max="2" value="0" class="ai-slider" onchange='findai()'>
+  </div>
+
+<img class = 'intro-pidgeon-1' src = 'images/Pidgeon-1.png'>
+<img class = 'intro-pidgeon-2' src = 'images/Pidgeon-2.png'>
+<img class = 'intro-pidgeon-3' src = 'images/Pidgeon-3.png'>
+<img class = 'intro-pidgeon-4' src = 'images/Pidgeon-5.png'>
+
+<img class = 'ai-pidgeon-1' src = 'images/Pidgeon-4.png'>
+<img class = 'ai-pidgeon-2' src = 'images/Pidgeon-4.png'>
+
+<img class = 'intro-image' src = 'images/Intro-Image.png'>
+<button class = 'start-button'><img src='images/start-button.png'></button>
+<button class = 'countinue-button'>Countinue</button>
+<p class = 'backsplash'></p>
+<p class = 'backsplash-2'></p>
+<p class = 'turn'>Player</p>
+<button class = 'instructions-button'><img src = 'images/Instructions-button.png'></button>
+<button class = 'back'>Back</button>
+<img class = 'instructions' src = 'images/Instructions.png'>
+
+<img class = 'board' src='images/Board.png'>
+
+<button class = 'roll'>Roll</button>
+
+<script>
+function int () {
+    document.querySelector('.intro-pidgeon-1').style.display = 'none';
+    document.querySelector('.intro-pidgeon-2').style.display = 'none';
+    document.querySelector('.intro-pidgeon-3').style.display = 'none';
+    document.querySelector('.intro-pidgeon-4').style.display = 'none';
+    document.querySelector('.ai-pidgeon-1').style.display = 'none';
+    document.querySelector('.ai-pidgeon-2').style.display = 'none';
+    document.querySelector('.aislidecontainer').style.display = 'none';
+    document.querySelector('.playerslidecontainer').style.display = 'none';
+    document.querySelector('.countinue-button').style.display = 'none';
+    document.querySelector('.board').style.display = 'none';
+    document.querySelector('.instructions').style.display = 'none';
+    document.querySelector('.back').style.display = 'none';
+    document.querySelector('.intro-image').style.display = 'block'
+    document.querySelector('.start-button').style.display = 'block'
+    document.querySelector('.instructions-button').style.display = 'block'
+    document.querySelector('.roll').style.display = 'none';
+    document.querySelector('.turn').style.display = 'none';
+}
+function findplayer () {
+    var pslider = document.querySelector('.player-slider').value;
+    for (i = 1; i < 5; i++) {
+        if (i <= pslider) {
+            document.querySelector('.intro-pidgeon-' + i).style.display = 'block';
+        } else {
+            document.querySelector('.intro-pidgeon-' + i).style.display = 'none'
+        }
+    }
+}
+function findai () {
+    var aslider = document.querySelector('.ai-slider').value;
+    var pvalue = document.querySelector('.player-slider').value;
+    for (p = 1; p < 3; p ++) {
+        if (p <= aslider) {
+            document.querySelector('.ai-pidgeon-' + p).style.display = 'block';
+        } else {
+            document.querySelector('.ai-pidgeon-' + p).style.display = 'none';
+        }
+    }
+}
+document.querySelector('.start-button').addEventListener('click', function () {
+    document.querySelector('.intro-image').style.display = 'none';
+    document.querySelector('.playerslidecontainer').style.display = 'block';
+    document.querySelector('.aislidecontainer').style.display = 'block';
+    document.querySelector('.countinue-button').style.display = 'block';
+    document.querySelector('.start-button').style.display = 'none';
+    document.querySelector('.instructions-button').style.display = 'none';
+    findplayer();
+})
+document.querySelector('.countinue-button').addEventListener('click', function () {
+    var ai = document.querySelector('.ai-slider').value;
+    var player = document.querySelector('.player-slider').value;
+    console.log(ai, player)
+    document.querySelector('.backsplash').style.display = 'none';
+    document.querySelector('.backsplash-2').style.display = 'none';
+    document.querySelector('.aislidecontainer').style.display = 'none';
+    document.querySelector('.playerslidecontainer').style.display = 'none';
+    document.querySelector('.intro-pidgeon-1').style.display = 'none';
+    document.querySelector('.intro-pidgeon-2').style.display = 'none';
+    document.querySelector('.intro-pidgeon-3').style.display = 'none';
+    document.querySelector('.intro-pidgeon-4').style.display = 'none';
+    document.querySelector('.ai-pidgeon-1').style.display = 'none';
+    document.querySelector('.ai-pidgeon-2').style.display = 'none';
+    document.querySelector('.countinue-button').style.display = 'none';
+    document.querySelector('.board').style.display = 'block';
+    document.querySelector('.backsplash').style.display = 'block';
+    document.querySelector('.roll').style.display = 'block'
+    var h = 1
+    var f = 1
+    while (h <= player) {
+        console.log('work')
+        document.querySelector('.intro-pidgeon-' + h).style.display = 'block' 
+        h = h + 1
+    }
+    while (f <= ai) {
+        document.querySelector('.ai-pidgeon-' + f).style.display = 'block'
+        f = f + 1
+    }
+    document.querySelector('.intro-pidgeon-1').style.left = '475px'
+    document.querySelector('.intro-pidgeon-1').style.top = '525px'
+    document.querySelector('.intro-pidgeon-2').style.left = '475px'
+    document.querySelector('.intro-pidgeon-2').style.top = '525px'
+    document.querySelector('.intro-pidgeon-3').style.left = '475px'
+    document.querySelector('.intro-pidgeon-3').style.top = '525px'
+    document.querySelector('.intro-pidgeon-4').style.left = '475px'
+    document.querySelector('.intro-pidgeon-4').style.top = '525px'
+    document.querySelector('.ai-pidgeon-1').style.left = '475px'
+    document.querySelector('.ai-pidgeon-1').style.top = '525px'
+    document.querySelector('.ai-pidgeon-2').style.left = '475px'
+    document.querySelector('.ai-pidgeon-2').style.top = '525px'
+    var p1 = 475
+    var pp1 = 525
+    var p2 = 475
+    var pp2 = 525
+    var p3 = 475
+    var pp3 = 525
+    var p4 = 475
+    var pp4 = 525
+    var a1 = 475
+    var aa1 = 525
+    var a2 = 475
+    var aa2 = 525
+    var space1 = 0
+    var space2 = 0
+    var move = 123
+    cycle();
+    function cycle () {
+        for (k = 1; k <= player; k++) {
+            console.log('cycle')
+            document.querySelector('.roll').style.display = 'block'
+            document.querySelector('.turn').textContent = 'Player ' + k + '\'s Turn'
+            document.querySelector('.turn').style.display = 'block'
+            if (k == 1) {
+                document.querySelector('.roll').addEventListener('click', function () {             
+                    document.querySelector('.roll').style.display = 'none'
+                    var roll1 = Math.floor(Math.random() * 6) + 1
+                    document.querySelector('.turn').textContent = 'You rolled a ' + roll1;
+                    k = k - 1
+                    while (roll1 > 0) {
+                        p1 = p1 + move
+                        roll1 = roll1 - 1
+                        space1 = space1 + 1
+                        console.log(space1)
+                        if (space1 == 5 || space1 == 11 || space1 == 17 || space1 == 23 || space1 == 29 || space1 == 35 || space1 == 41) {
+                            pp1 = pp1 - 50
+                            document.querySelector('.intro-pidgeon-' + k).style.top = pp1 + 'px'
+                            move = move * -1
+                        }
+                        document.querySelector('.intro-pidgeon-' + k).style.left = p1 + 'px' 
+                    }   
+                })
+            }
+            if (k == 2) {
+                document.querySelector('.roll').addEventListener('click', function () {             
+                    document.querySelector('.roll').style.display = 'none'
+                    var roll2 = Math.floor(Math.random() * 6) + 1
+                    k = k - 1
+                    while (roll2 > 0) {
+                        p2 = p3 + move
+                        roll2 = roll2 - 1
+                        space2 = space2 + 1
+                        console.log(space2)
+                        if (space2 == 5 || space2 == 11 || space2 == 17 || space2 == 23 || space2 == 29 || space2 == 35 || space2 == 41) {
+                            pp2 = pp2 - 50
+                            document.querySelector('.intro-pidgeon-' + k).style.top = pp2 + 'px'
+                            move2 = move2 * -1
+                        }
+                        document.querySelector('.intro-pidgeon-' + k).style.left = p2 + 'px'
+                    }
+                })
+            }
+        }
+    }   
+})
+document.querySelector('.instructions-button').addEventListener('click', function () {
+    document.querySelector('.instructions').style.display = 'block';
+    document.querySelector('.back').style.display = 'block';
+    document.querySelector('.intro-image').style.display = 'none'
+    document.querySelector('.start-button').style.display = 'none'
+    document.querySelector('.instructions-button').style.display = 'none'
+
+})
+document.querySelector('.back').addEventListener('click', function () {
+int()
+})
+int();
+</script>
+</body>
+</html>

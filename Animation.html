@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animation</title>
+
+<style>
+    .Load-1{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-2{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-3{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-4{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-5{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-6{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-7{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-8{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-9{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-10{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-11{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-12{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-13{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-14{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-15{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-16{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-17{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .Load-18{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        right: 100px;
+        bottom: 50px;
+    }
+    .start{
+        position: absolute;
+        width: 125px;
+        height: 75px;
+        left: 40%;
+        top: 65%;
+        font-family:monospace;
+        font-size: 25px;
+    }
+    .cloud-1{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-2{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-3{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-4{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-5{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-6{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-7{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-8{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-9{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-10{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-11{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-12{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-13{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-14{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-15{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-16{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-17{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-18{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-19{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-20{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .cloud-21{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .settings{
+        position: absolute;
+        width: 125px;
+        height: 75px;
+        left: 50%;
+        top: 65%;
+        font-family:monospace;
+        font-size: 25px;
+    }
+    .backsplash{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        left: 0px;
+        top: -16px;
+        background-color: lightblue;
+    }
+    .high{
+        position: absolute;
+        width: 100px;
+        right: 20px;
+    }
+    .Selection{
+        position: absolute;
+        width: 100px;
+        right: 20px;
+        top: 15px;
+        background-color: grey;
+        border-style: solid;
+        border-width: 1px;
+    }
+    .return{
+        position: absolute;
+        width: 70px;
+        height: 35px;
+        right: 40px;
+        top: 90%;
+        font-family:monospace;
+        font-size: 25px;
+    }
+    .title-1{
+        position: absolute;
+        left: 40%;
+        top: 5%;
+        width: 300px;
+        height: 400px;
+    }
+    .title-2{
+        position: absolute;
+        left: 40%;
+        top: 5%;
+        width: 300px;
+        height: 400px;
+    }
+    .title-3{
+        position: absolute;
+        left: 40%;
+        top: 5%;
+        width: 300px;
+        height: 400px;
+    }
+    .title-4{
+        position: absolute;
+        left: 40%;
+        top: 5%;
+        width: 300px;
+        height: 400px;
+    }
+    .title-5{
+        position: absolute;
+        left: 40%;
+        top: 5%;
+        width: 300px;
+        height: 400px;
+    }
+    .background{
+        position: absolute;
+        width: 1350px;
+        height: 700px;
+        left: 85px;
+        top: 8px;
+        z-index: -1;
+    }
+    .rocket-1{
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        left: 650px;
+        bottom: 100px;
+    }
+    .rocket-2{
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        left: 650px;
+        bottom: 100px;
+    }
+    .rocket-3{
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        left: 650px;
+        bottom: 100px;
+    }
+    .rocket-4{
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        left: 650px;
+        bottom: 100px;
+    }
+    .rocket-5{
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        left: 650px;
+        bottom: 100px;
+    }
+    .countdown-2{
+        position: absolute;
+        left: 45%;
+        top: 3%;
+    }
+    .countdown-3{
+        position: absolute;
+        left: 45%;
+        top: 3%;
+    }
+    .countdown-4{
+        position: absolute;
+        left: 41%;
+        top: 3%;
+    }
+    .launch-1{
+        position: absolute;
+        z-index: -1;
+        left: 150px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .launch-2{
+        position: absolute;
+        z-index: -1;
+        left: 150px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .launch-3{
+        position: absolute;
+        z-index: -1;
+        left: 150px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .launch-4{
+        position: absolute;
+        z-index: -1;
+        left: 85px;
+        top: 8px;
+        height: 700px;
+        width: 1350px;
+        border-style: solid;
+        border-width: 2px;
+    }
+</style>
+
+</head>
+<body>
+
+<button class = 'start'>Start</button>
+<button class = 'settings'>Settings</button>
+<img class = 'Load-1' src='images/Load-1.png'></img>
+<img class = 'Load-2' src='images/Load-2.png'></img>
+<img class = 'Load-3' src='images/Load-3.png'></img>
+<img class = 'Load-4' src='images/Load-4.png'></img>
+<img class = 'Load-5' src='images/Load-5.png'></img>
+<img class = 'Load-6' src='images/Load-6.png'></img>
+<img class = 'Load-7' src='images/Load-7.png'></img>
+<img class = 'Load-8' src='images/Load-8.png'></img>
+<img class = 'Load-9' src='images/Load-9.png'></img>
+<img class = 'Load-10' src='images/Load-10.png'></img>
+<img class = 'Load-11' src='images/Load-11.png'></img>
+<img class = 'Load-12' src='images/Load-12.png'></img>
+<img class = 'Load-13' src='images/Load-13.png'></img>
+<img class = 'Load-14' src='images/Load-14.png'></img>
+<img class = 'Load-15' src='images/Load-15.png'></img>
+<img class = 'Load-16' src='images/Load-16.png'></img>
+<img class = 'Load-17' src='images/Load-17.png'></img>
+<img class = 'Load-18' src='images/Load-18.png'></img>
+
+<img class = 'cloud-1' src='images/cloud-1.png'></img>
+<img class = 'cloud-2' src='images/cloud-2.png'></img>
+<img class = 'cloud-3' src='images/cloud-3.png'></img>
+<img class = 'cloud-4' src='images/cloud-4.png'></img>
+<img class = 'cloud-5' src='images/cloud-5.png'></img>
+<img class = 'cloud-6' src='images/cloud-6.png'></img>
+<img class = 'cloud-7' src='images/cloud-7.png'></img>
+<img class = 'cloud-8' src='images/cloud-8.png'></img>
+<img class = 'cloud-9' src='images/cloud-9.png'></img>
+<img class = 'cloud-10' src='images/cloud-10.png'></img>
+<img class = 'cloud-11' src='images/cloud-11.png'></img>
+<img class = 'cloud-12' src='images/cloud-12.png'></img>
+<img class = 'cloud-13' src='images/cloud-13.png'></img>
+<img class = 'cloud-14' src='images/cloud-14.png'></img>
+<img class = 'cloud-15' src='images/cloud-15.png'></img>
+<img class = 'cloud-16' src='images/cloud-16.png'></img>
+<img class = 'cloud-17' src='images/cloud-17.png'></img>
+<img class = 'cloud-18' src='images/cloud-18.png'></img>
+<img class = 'cloud-19' src='images/cloud-19.png'></img>
+<img class = 'cloud-20' src='images/cloud-20.png'></img>
+<img class = 'cloud-21' src='images/cloud-21.png'></img>
+<img class = 'rocket-1' src='images/rocket-1.png'></img>
+<img class = 'rocket-2' src='images/rocket-2.png'></img>
+<img class = 'rocket-3' src='images/rocket-3.png'></img>
+<img class = 'rocket-4' src='images/rocket-4.png'></img>
+<img class = 'rocket-5' src='images/rocket-5.png'></img>
+<p class = 'backsplash'></p>
+<select class = 'high' onchange = 'cloud()'>
+    <option>High Quality (Fast Computers)</option>
+    <option>Low Quality (Slow Computers)</option>
+</select>
+<button class = 'return'>Back</button>
+<p class = 'Selection'>Selected: High Quality (Fast Computers)</p>
+<img class = 'title-1' src='images/Title-1.png'>
+<img class = 'title-2' src='images/Title-2.png'>
+<img class = 'title-3' src='images/Title-3.png'>
+<img class = 'title-4' src='images/Title-4.png'>
+<img class = 'title-5' src='images/Title-5.png'>
+<img class = 'background' src='images/Background-play.png'>
+<img class = 'countdown-1' src='images/countdown-1.png'>
+<img class = 'countdown-2' src='images/countdown-2.png'>
+<img class = 'countdown-3' src='images/countdown-3.png'>
+<img class = 'countdown-4' src='images/countdown-4.png'>
+<img class = 'launch-1'src='images/launch-1.png'>
+<img class = 'launch-2'src='images/launch-2.png'>
+<img class = 'launch-3'src='images/launch-3.png'>
+<img class = 'launch-4'src='images/launch-4.png'>
+<script>
+var low
+
+function  int () {
+    document.querySelector('.Load-1').style.display = 'none';
+    document.querySelector('.Load-2').style.display = 'none';
+    document.querySelector('.Load-3').style.display = 'none';
+    document.querySelector('.Load-4').style.display = 'none';
+    document.querySelector('.Load-5').style.display = 'none';
+    document.querySelector('.Load-6').style.display = 'none';
+    document.querySelector('.Load-7').style.display = 'none';
+    document.querySelector('.Load-8').style.display = 'none';
+    document.querySelector('.Load-9').style.display = 'none';
+    document.querySelector('.Load-10').style.display = 'none';
+    document.querySelector('.Load-11').style.display = 'none';
+    document.querySelector('.Load-12').style.display = 'none';
+    document.querySelector('.Load-13').style.display = 'none';
+    document.querySelector('.Load-14').style.display = 'none';
+    document.querySelector('.Load-15').style.display = 'none';
+    document.querySelector('.Load-16').style.display = 'none';
+    document.querySelector('.Load-17').style.display = 'none';
+    document.querySelector('.Load-18').style.display = 'none';
+    document.querySelector('.cloud-2').style.display = 'none';
+    document.querySelector('.cloud-3').style.display = 'none';
+    document.querySelector('.cloud-4').style.display = 'none';
+    document.querySelector('.cloud-5').style.display = 'none';
+    document.querySelector('.cloud-6').style.display = 'none';
+    document.querySelector('.cloud-7').style.display = 'none';
+    document.querySelector('.cloud-8').style.display = 'none';
+    document.querySelector('.cloud-9').style.display = 'none';
+    document.querySelector('.cloud-10').style.display = 'none';
+    document.querySelector('.cloud-11').style.display = 'none';
+    document.querySelector('.cloud-12').style.display = 'none';
+    document.querySelector('.cloud-13').style.display = 'none';
+    document.querySelector('.cloud-14').style.display = 'none';
+    document.querySelector('.cloud-15').style.display = 'none';
+    document.querySelector('.cloud-16').style.display = 'none';
+    document.querySelector('.cloud-17').style.display = 'none';
+    document.querySelector('.cloud-18').style.display = 'none';
+    document.querySelector('.cloud-19').style.display = 'none';
+    document.querySelector('.cloud-20').style.display = 'none';
+    document.querySelector('.cloud-21').style.display = 'none';
+    document.querySelector('.start').style.display = 'block';
+    document.querySelector('.high').style.display = 'none';
+    document.querySelector('.Selection').style.display = 'none'
+    document.querySelector('.rocket-1').style.display = 'none'
+    document.querySelector('.rocket-2').style.display = 'none'
+    document.querySelector('.rocket-3').style.display = 'none'
+    document.querySelector('.rocket-4').style.display = 'none'
+    document.querySelector('.rocket-5').style.display = 'none'
+    document.querySelector('.return').style.display = 'none'
+    document.querySelector('.title-2').style.display = 'none'
+    document.querySelector('.title-3').style.display = 'none'
+    document.querySelector('.title-4').style.display = 'none'
+    document.querySelector('.title-5').style.display = 'none'
+    document.querySelector('.background').style.display = 'none'
+    document.querySelector('.countdown-1').style.display = 'none'
+    document.querySelector('.countdown-2').style.display = 'none'
+    document.querySelector('.countdown-3').style.display = 'none'
+    document.querySelector('.countdown-4').style.display = 'none'
+    document.querySelector('.launch-1').style.display = 'none'
+    document.querySelector('.launch-2').style.display = 'none'
+    document.querySelector('.launch-3').style.display = 'none'
+    document.querySelector('.launch-4').style.display = 'none'
+}
+function load () {
+    document.querySelector('.Load-2').style.display = 'none';
+    document.querySelector('.Load-3').style.display = 'none';
+    document.querySelector('.Load-4').style.display = 'none';
+    document.querySelector('.Load-5').style.display = 'none';
+    document.querySelector('.Load-6').style.display = 'none';
+    document.querySelector('.Load-7').style.display = 'none';
+    document.querySelector('.Load-8').style.display = 'none';
+    document.querySelector('.Load-9').style.display = 'none';
+    document.querySelector('.Load-10').style.display = 'none';
+    document.querySelector('.Load-11').style.display = 'none';
+    document.querySelector('.Load-12').style.display = 'none';
+    document.querySelector('.Load-13').style.display = 'none';
+    document.querySelector('.Load-14').style.display = 'none';
+    document.querySelector('.Load-15').style.display = 'none';
+    document.querySelector('.Load-16').style.display = 'none';
+    document.querySelector('.Load-17').style.display = 'none';
+    document.querySelector('.Load-18').style.display = 'none';
+
+    var inc = 1
+    
+    setTimeout(animation1, 100)
+    function animation1 () {
+        document.querySelector('.Load-' + inc).style.display = 'none';
+        inc = inc + 1
+        if (inc == 18) {
+            inc = 1
+            document.querySelector('.Load-' + inc).style.display = 'block';
+            setTimeout(animation1, 100)
+        } else {
+            document.querySelector('.Load-' + inc).style.display = 'block';
+            setTimeout(animation2, 100)
+        }
+        function animation2 () {
+            document.querySelector('.Load-' + inc).style.display = 'none';
+            inc = inc + 1
+            if (inc == 18) {
+                inc = 1
+                document.querySelector('.Load-' + inc).style.display = 'block';
+                setTimeout(animation1, 100)
+            } else {
+                document.querySelector('.Load-' + inc).style.display = 'block';
+                setTimeout(animation1, 100)
+            }
+    }
+    }
+}
+function cloud () {
+    document.querySelector('.cloud-2').style.display = 'none'
+    document.querySelector('.cloud-3').style.display = 'none'
+    document.querySelector('.cloud-4').style.display = 'none'
+    document.querySelector('.cloud-5').style.display = 'none'
+    document.querySelector('.cloud-6').style.display = 'none'
+    document.querySelector('.cloud-7').style.display = 'none'
+    document.querySelector('.cloud-8').style.display = 'none'
+    document.querySelector('.cloud-9').style.display = 'none'
+    document.querySelector('.cloud-10').style.display = 'none'
+    document.querySelector('.cloud-11').style.display = 'none'
+    document.querySelector('.cloud-12').style.display = 'none'
+    document.querySelector('.cloud-13').style.display = 'none'
+    document.querySelector('.cloud-14').style.display = 'none'
+    document.querySelector('.cloud-15').style.display = 'none'
+    document.querySelector('.cloud-16').style.display = 'none'
+    document.querySelector('.cloud-17').style.display = 'none'
+    document.querySelector('.cloud-18').style.display = 'none'
+    document.querySelector('.cloud-19').style.display = 'none'
+    document.querySelector('.cloud-20').style.display = 'none'
+    document.querySelector('.cloud-21').style.display = 'none'
+
+    var clo = 1
+
+    setTimeout(animation3, 100)
+    function animation3 () {
+        document.querySelector('.cloud-' + clo).style.display = 'none';
+        clo = clo + 1
+        if (clo == 21) {
+            clo = 1
+            document.querySelector('.cloud-' + clo).style.display = 'block';
+            setTimeout(animation4, 100)
+        } else {
+            document.querySelector('.cloud-' + clo).style.display = 'block';
+            setTimeout(animation4, 100)
+        }
+        function animation4 () {
+            document.querySelector('.cloud-' + clo).style.display = 'none';
+            clo = clo + 1
+            if (clo == 21) {
+                clo = 1
+                document.querySelector('.cloud-' + clo).style.display = 'block';
+                select()
+            } else {
+                document.querySelector('.cloud-' + clo).style.display = 'block';
+                select()
+            }
+        }
+        function animation5 () {
+            var title = Math.floor(Math.random()*30)+1
+            if (title == 30) {
+                var dem = 1
+                setTimeout(animation3,100)
+                setTimeout(animation6, 100)
+                function animation6 () {
+                    document.querySelector('.title-' + dem).style.display = 'none'
+                    dem = dem + 1
+                    if (dem == 5) {
+                        document.querySelector('.title-' + dem).style.display = 'none'
+                        document.querySelector('.title-1').style.display = 'block'
+                    } else {
+                        document.querySelector('.title-' + dem).style.display = 'block'
+                        setTimeout(animation6, 100)
+                    } 
+                }
+            } else {
+                setTimeout(animation3, 100)
+            }
+            function animation6 () {
+                document.querySelector('.title-' + dem).style.display = 'none'
+                    dem = dem + 1
+                    if (dem == 5) {
+                        document.querySelector('.title-' + dem).style.display = 'none'
+                        document.querySelector('.title-1').style.display = 'block'
+                    } else {
+                        document.querySelector('.title-' + dem).style.display = 'block'
+                        setTimeout(animation5, 100)
+                    } 
+            }
+        }
+        function select() {
+            var quality = document.querySelector('.high').value;
+            document.querySelector('.Selection').textContent = 'Selected: ' + quality;
+            if (quality == 'High Quality (Fast Computers)') {
+                setTimeout(animation5(), 100)
+            } 
+        }
+    }
+}
+document.querySelector('.settings').addEventListener('click', function () {
+    document.querySelector('.cloud-1').style.left = '35px'
+    document.querySelector('.cloud-2').style.left = '35px'
+    document.querySelector('.cloud-3').style.left = '35px'
+    document.querySelector('.cloud-4').style.left = '35px'
+    document.querySelector('.cloud-5').style.left = '35px'
+    document.querySelector('.cloud-6').style.left = '35px'
+    document.querySelector('.cloud-7').style.left = '35px'
+    document.querySelector('.cloud-8').style.left = '35px'
+    document.querySelector('.cloud-9').style.left = '35px'
+    document.querySelector('.cloud-10').style.left = '35px'
+    document.querySelector('.cloud-11').style.left = '35px'
+    document.querySelector('.cloud-12').style.left = '35px'
+    document.querySelector('.cloud-13').style.left = '35px'
+    document.querySelector('.cloud-14').style.left = '35px'
+    document.querySelector('.cloud-15').style.left = '35px'
+    document.querySelector('.cloud-16').style.left = '35px'
+    document.querySelector('.cloud-17').style.left = '35px'
+    document.querySelector('.cloud-18').style.left = '35px'
+    document.querySelector('.cloud-19').style.left = '35px'
+    document.querySelector('.cloud-20').style.left = '35px'
+    document.querySelector('.cloud-21').style.left = '35px'
+    document.querySelector('.start').style.left = '37%'
+    document.querySelector('.settings').style.left = '47%'
+    document.querySelector('.title-1').style.left = '37%'
+    document.querySelector('.title-2').style.left = '37%'
+    document.querySelector('.title-3').style.left = '37%'
+    document.querySelector('.title-4').style.left = '37%'
+    document.querySelector('.title-5').style.left = '37%'
+    document.querySelector('.high').style.display = 'block'
+    document.querySelector('.Selection').style.display = 'block'
+    document.querySelector('.return').style.display = 'block'
+})
+
+document.querySelector('.start').addEventListener('click', function () {
+    document.querySelector('.rocket-1').style.display = 'block'
+    document.querySelector('.high').selectedIndex = '2'
+    setTimeout(remove, 100)
+    function remove () {
+        document.querySelector('.cloud-1').style.display = 'none'
+        document.querySelector('.cloud-2').style.display = 'none'
+        document.querySelector('.cloud-3').style.display = 'none'
+        document.querySelector('.cloud-4').style.display = 'none'
+        document.querySelector('.cloud-5').style.display = 'none'
+        document.querySelector('.cloud-6').style.display = 'none'
+        document.querySelector('.cloud-7').style.display = 'none'
+        document.querySelector('.cloud-8').style.display = 'none'
+        document.querySelector('.cloud-9').style.display = 'none'
+        document.querySelector('.cloud-10').style.display = 'none'
+        document.querySelector('.cloud-11').style.display = 'none'
+        document.querySelector('.cloud-12').style.display = 'none'
+        document.querySelector('.cloud-13').style.display = 'none'
+        document.querySelector('.cloud-14').style.display = 'none'
+        document.querySelector('.cloud-15').style.display = 'none'
+        document.querySelector('.cloud-16').style.display = 'none'
+        document.querySelector('.cloud-17').style.display = 'none'
+        document.querySelector('.cloud-18').style.display = 'none'
+        document.querySelector('.cloud-19').style.display = 'none'
+        document.querySelector('.cloud-20').style.display = 'none'
+        document.querySelector('.cloud-21').style.display = 'none'
+        document.querySelector('.title-1').style.display = 'none'
+        document.querySelector('.title-2').style.display = 'none'
+        document.querySelector('.title-3').style.display = 'none'
+        document.querySelector('.title-4').style.display = 'none'
+        document.querySelector('.title-5').style.display = 'none'
+        document.querySelector('.start').style.display = 'none'
+        document.querySelector('.settings').style.display = 'none'
+        setTimeout(countdown, 100)
+    }
+})
+function countdown () {
+    var con = 1
+    setTimeout(animation9, 100)
+    function animation9 () {
+        document.querySelector('.countdown-' + con).style.display = 'none'
+        con = con + 1
+        if (con == 5) {
+            setTimeout(rocket,100)
+        }  else {
+            document.querySelector('.countdown-' + con).style.display = 'block'
+            setTimeout(animation10, 500)
+        }
+        function animation10 () {
+            document.querySelector('.countdown-' + con).style.display = 'none'
+            con = con + 1
+            if (con == 5) {
+                setTimeout(rocket, 100)
+            } else {
+                document.querySelector('.countdown-' + con).style.display = 'block'
+                setTimeout(animation9, 500)
+            }
+        }
+    }
+}
+function rocket () {
+    var fun = 1
+    setTimeout(animation7, 100)
+    function animation7 () {
+        document.querySelector('.rocket-' + fun).style.display = 'none'
+        fun = fun + 1
+        if (fun == 5) {
+            setTimeout(launch, 100)
+        }  else {
+            document.querySelector('.rocket-' + fun).style.display = 'block'
+            setTimeout(animation8, 100)
+        }
+        function animation8 () {
+            document.querySelector('.rocket-' + fun).style.display = 'none'
+            fun = fun + 1
+            if (fun == 5) {
+                setTimeout(launch,100)
+            } else {
+                document.querySelector('.rocket-' + fun).style.display = 'block'
+                setTimeout(animation7, 100)
+            }
+        }
+    }
+}
+function launch () {
+    var buy = 1
+    var interval = 1
+    setTimeout(animation11, 100)
+    function animation11 () {
+        document.querySelector('.launch-' + buy).style.display = 'none'
+        if (buy == 4) {
+            interval = interval + 1
+            if (interval == 10) {
+                console.log('countinue')
+            } else {
+                setTimeout(animation11, 100)
+            }
+        } else {
+            buy = buy + 1
+            document.querySelector('.launch-' + buy).style.display = 'block'
+            setTimeout(animation12, 100)
+        }
+        function animation12 () {
+            document.querySelector('.launch-' + buy).style.display = 'none'
+            if (buy == 4) {
+                interval = interval + 1
+                if (interval == 10) {
+                    console.log('countinue')
+                } else {
+                    setTimeout(animation11,100)
+                }
+            } else {
+                buy = buy + 1
+                document.querySelector('.launch-' + buy).style.display = 'block'
+                setTimeout(animation11, 100)
+            }
+        }
+    }
+}
+
+document.querySelector('.return').addEventListener('click', function () {
+    document.querySelector('.cloud-1').style.left = '85px'
+    document.querySelector('.cloud-2').style.left = '85px'
+    document.querySelector('.cloud-3').style.left = '85px'
+    document.querySelector('.cloud-4').style.left = '85px'
+    document.querySelector('.cloud-5').style.left = '85px'
+    document.querySelector('.cloud-6').style.left = '85px'
+    document.querySelector('.cloud-7').style.left = '85px'
+    document.querySelector('.cloud-8').style.left = '85px'
+    document.querySelector('.cloud-9').style.left = '85px'
+    document.querySelector('.cloud-10').style.left = '85px'
+    document.querySelector('.cloud-11').style.left = '85px'
+    document.querySelector('.cloud-12').style.left = '85px'
+    document.querySelector('.cloud-13').style.left = '85px'
+    document.querySelector('.cloud-14').style.left = '85px'
+    document.querySelector('.cloud-15').style.left = '85px'
+    document.querySelector('.cloud-16').style.left = '85px'
+    document.querySelector('.cloud-17').style.left = '85px'
+    document.querySelector('.cloud-18').style.left = '85px'
+    document.querySelector('.cloud-19').style.left = '85px'
+    document.querySelector('.cloud-20').style.left = '85px'
+    document.querySelector('.cloud-21').style.left = '85px'
+    document.querySelector('.settings').style.left = '50%'
+    document.querySelector('.start').style.left = '40%'
+    document.querySelector('.title-1').style.left = '40%'
+    document.querySelector('.title-2').style.left = '40%'
+    document.querySelector('.title-3').style.left = '40%'
+    document.querySelector('.title-4').style.left = '40%'
+    document.querySelector('.title-5').style.left = '40%'
+    document.querySelector('.return').style.display = 'none'
+    document.querySelector('.Selection').style.display = 'none'
+    document.querySelector('.high').style.display = 'none'
+})
+int();
+cloud();
+</script>
+</body>
+</html>
