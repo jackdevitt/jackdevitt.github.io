@@ -18,7 +18,7 @@ $(document).ready(function () {
             $('.logInError').hide()
             var username = $('.username').val()
             var password = $('.password').val()
-            logIn();
+            loadDoc();
         }  
     })
 
@@ -53,7 +53,7 @@ function loadDoc() {
 function logIn (xml) {
     var i;
     var xmlDoc = xml.responseXML;
-    console.log(xmlDoc)
+    var usernameCheck = xmlDoc.getElementsByTagName('Username')
 }
 loadDoc();
 </script>
