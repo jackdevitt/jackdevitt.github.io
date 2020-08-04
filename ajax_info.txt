@@ -1,1 +1,12 @@
-var x = 'Password'
+<Catalog>
+    <User>
+        <Username>Happy123</Username>
+        <Password>12345>/Password>
+        <Funds>$9999</Funds>
+    </User>
+    <User>
+        <Username>DogLover</username>
+        <Password>Dog4Life</username>
+        <Funds>$19863</Funds>
+    </User>
+</Catalog>

@@ -2,26 +2,60 @@
 <html>
 <head>
 <title>Ajax</title>
+<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+<script>
+$(document).ready(function () {
+    $('.username').val('Username')
+    $('.password').val('Password')
+    $('.submit').click(function () {
+        if ( $('.username').val().length === 0) {
+            $('.logInError').show()
+        }
+        if ( $('.password').val().length === 0) {
+            $('.logInError').show()
+        }
+        if ( $('.username').val().length >= 1 || ( $('.username').val().length >= 1)) {
+            $('.logInError').hide()
+            var username = $('.username').val()
+            var password = $('.password').val()
+            logIn();
+        }  
+    })
+
+})
+</script>
+<style>
+    .logInError {
+        color: red;
+        display: none;
+    }
+</style>
 </head>
 <body>
    
-<div id="demo">
-    <h2>Let AJAX change this text</h2>
-    <button type="button" onclick="loadDoc()">Change Content</button>
-</div>
+<input class = 'username'></input>
+<input class = 'password'></input>
+<input class = 'submit' type = 'submit'></input> 
+
+<p class = 'logInError'>Username or Password cannot be blank</p>
     
 <script>
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-       document.getElementById("demo").innerHTML = this.responseText;
-      }
+    if (this.readyState == 4 && this.status == 200) {
+        logIn(this);
+    }
     };
-    xhttp.open("GET", "jackdevitt.github.io/ajax_info.txt", true);
+    xhttp.open("GET", "ajax_info.txt", true);
     xhttp.send();
 }
-console.log(x)
+function logIn (xml) {
+    var i;
+    var xmlDoc = xml.responseXML;
+    console.log(xmlDoc)
+}
+loadDoc();
 </script>
 </body>
 </html>
