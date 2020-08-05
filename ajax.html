@@ -193,7 +193,9 @@ function logIn(xml, username, password) {
                 document.querySelector('.logOut').style.display = 'block';
                 document.querySelector('.fund').style.display = 'block';
                 document.querySelector('.user').style.display = 'block';
-                document.querySelector('.user').textContent = username
+                document.querySelector('.user').textContent = username;
+                funds = user[i].getElementsByTagName('FUNDS')[0].childNodes[0].nodeValue
+                document.querySelector('.fund').textContent = funds
             } else {
                 document.querySelector('.logInError2').style.display = 'block';
             }
