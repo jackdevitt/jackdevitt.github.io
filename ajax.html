@@ -57,8 +57,8 @@ function logIn(xml, username, password) {
     var xmlDoc = xml.responseXML;
     var user = xmlDoc.getElementsByTagName('USER')
     for (i = 0; i < user.length; i++) {
-        usernameCheck = user[i].getElementsByTagName('USERNAME')
-        passwordCheck = user[i].getElementsByTagName('PASSWORD')
+        usernameCheck = user[i].getElementsByTagName('USERNAME')[0].childNodes[0].nodeValue
+        passwordCheck = user[i].getElementsByTagName('PASSWORD')[0].childNodes[0].nodeValue
         console.log(usernameCheck)
         if (usernameCheck[i] = username) {
             var userInterval = i
