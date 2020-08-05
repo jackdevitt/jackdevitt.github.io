@@ -128,8 +128,11 @@ function logIn(xml, username, password) {
         passwordCheck = rawPasswordCheck.toString()
         if (usernameCheck === username) {
             if (passwordCheck === password) {
+                document.querySelector('.username').style.display = 'none';
+                document.querySelector('.password').style.display = 'none';
+                document.querySelector('.submit').style.display = 'none';
+                document.querySelector('.backsplash-message').style.display = 'none';
                 document.querySelector('.logInError2').style.display = 'none';
-                console.log('.WORKING')
             } else {
                 document.querySelector('.logInError2').style.display = 'block';
             }
