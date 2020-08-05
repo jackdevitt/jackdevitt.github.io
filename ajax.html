@@ -10,11 +10,11 @@ $(document).ready(function () {
     $('.submit').click(function () {
         if ( $('.username').val().length === 0) {
             $('.logInError').show()
-            $('.logInError').hide()
+            $('.logInError2').hide()
         }
         if ( $('.password').val().length === 0) {
             $('.logInError').show()
-            $('.logInError').hide()
+            $('.logInError2').hide()
         }
         if ( $('.username').val().length >= 1 || ( $('.username').val().length >= 1)) {
             $('.logInError').hide()
@@ -85,7 +85,7 @@ $(document).ready(function () {
     .logInError2 {
         z-index: 1;
         position: absolute;
-        left: 630px;
+        left: 640px;
         top: 480px;
     }
 </style>
