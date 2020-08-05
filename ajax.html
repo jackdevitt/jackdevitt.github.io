@@ -57,7 +57,7 @@ function logIn(xml, username, password) {
     var xmlDoc = xml.responseXML;
     var usernameCheck = xmlDoc.getElementsByTagName('Username')
     for (i = 0; i < usernameCheck.length; i++) {
-        if (usernameCheck[i] == username) {
+        if (usernameCheck[i] = username) {
             usernameCorrect = true
             console.log('Correct')
         } else {
