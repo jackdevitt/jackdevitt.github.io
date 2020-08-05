@@ -60,18 +60,9 @@ function logIn(xml, username, password) {
     for (i = 0; i < usernameCheck.length; i++) {
         if (usernameCheck[i] = username) {
             var userInterval = i
-            if (passwordCheck[i] = password) {
-                var passInterval = i
-                if (userInterval == passInterval) {
-                    console.log('.entered')
-                } else {
-                    console.log('Password and Username Don\'t Match')
-                }
-            } else {
-                console.log('Incorrect Password')
-            }   
+            console.lod('Correct')
         } else {
-            console.log('Incorrect Username')
+            console.log('Incorrect')
         }
     }
 }
