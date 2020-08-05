@@ -5,6 +5,11 @@
 <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
 <script>
 $(document).ready(function () {
+    var interval = 1
+    $('.logOut').hide()
+    $('.user').hide()
+    $('.fund').hide()
+    $('.logOut-Message').hide()
     $('.username').val('Username')
     $('.password').val('Password')
     $('.submit').click(function () {
@@ -23,7 +28,21 @@ $(document).ready(function () {
             loadDoc(username, password);
         }  
     })
-
+    $('.logOut').click(function () {
+        interval = interval + 1
+        if (interval == 3) {
+            $('.logOut-Message').hide()
+            $('.logOut').hide()
+            $('.fund').hide()
+            $('.user').hide()
+            $('.backsplash-message').show()
+            $('.username').show()
+            $('.password').show()
+            $('.submit').show()
+        } else {
+            $('.logOut-Message').show()
+        }
+    })
 })
 </script>
 <style>
@@ -88,18 +107,56 @@ $(document).ready(function () {
         left: 650px;
         top: 480px;
     }
+    .logOut {
+        z-index: 1;
+        position: absolute;
+        left: 900px;
+        width: 100px;
+        height: 40px;
+        top: 100px;
+    }
+    .user {
+        z-index: 1;
+        position: absolute;
+        font-size: 35px;  
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        top: 60px;
+        left: 480px; 
+    }
+    .fund {
+        z-index: 1;
+        position: absolute;
+        font-size: 40px;  
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        top: 400px;
+        left: 600px;
+    }
+    .logOut-Message {
+        color: red;
+        z-index: 1;
+        position: absolute;
+        left: 900px;
+        width: 100px;
+        height: 40px;
+        top: 130px;
+    }
+    
 </style>
 </head>
 <body>
    
 <input class = 'username'></input>
 <input class = 'password'></input>
-<input class = 'submit' type = 'submit'></input> 
+<input class = 'submit' type = 'submit'></input>
+<button class = 'logOut'>Log Out</button> 
 
 <p class = 'logInError'>Username or Password cannot be blank</p>
 <p class = 'logInError2'>Username or Password is incorrect</p>
 <p class = 'backsplash'></p>
 <p class = 'backsplash-message'>Log In</p>
+<p class = 'user'>temp.</p>
+<p class = 'fund'>Balance - </p>
+<p class = 'logOut-Message'>Are you Sure?</p>
 
 
 <script>
@@ -133,6 +190,10 @@ function logIn(xml, username, password) {
                 document.querySelector('.submit').style.display = 'none';
                 document.querySelector('.backsplash-message').style.display = 'none';
                 document.querySelector('.logInError2').style.display = 'none';
+                document.querySelector('.logOut').style.display = 'block';
+                document.querySelector('.fund').style.display = 'block';
+                document.querySelector('.user').style.display = 'block';
+                document.querySelector('.user').textContent = username
             } else {
                 document.querySelector('.logInError2').style.display = 'block';
             }
