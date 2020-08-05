@@ -10,6 +10,11 @@
         <PASSWORD>Dog4Life</PASSWORD>
         <FUNDS>$19863</FUNDS>
     </USER>
+
+    <USER>
+        <USERNAME>FixTheButton</USERNAME>
+        <PASSWORD>FrenchFryFunRun</PASSWORD>
+        <FUNDS>$666</FUNDS>
 </database>
 
 
