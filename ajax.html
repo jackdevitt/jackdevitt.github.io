@@ -54,7 +54,14 @@ function logIn(xml) {
     var i;
     var xmlDoc = xml.responseXML;
     var usernameCheck = xmlDoc.getElementsByTagName('Username')
-    console.log(usernameCheck)
+    for (i = 0; i < usernameCheck.length; i++) {
+        if (usernameCheck[i] == username) {
+            usernameCorrect = true
+            console.log('Correct')
+        } else {
+            console.log('Incorrect')
+        }
+    }
 }
 </script>
 </body>
