@@ -16,6 +16,12 @@
         <PASSWORD>FrenchFryFunRun</PASSWORD>
         <FUNDS>$666</FUNDS>
     </USER>
+
+    <USER>
+        <USERNAME>Mom</USERNAME>
+        <PASSWORD>BestMomEver</PASSWORD>
+        <FUNDS>$1000</FUNDS>
+    </USER>
 </database>
 
 
