@@ -59,8 +59,10 @@ function logIn(xml, username, password) {
     for (i = 0; i < user.length; i++) {
         usernameCheck = user[i].getElementsByTagName('USERNAME')[0].childNodes[0].nodeValue
         passwordCheck = user[i].getElementsByTagName('PASSWORD')[0].childNodes[0].nodeValue
-        console.log(usernameCheck)
+        username.toString()
+        password.toString()
         usernameCheck.toString()
+        passwordCheck.toString()
         if (usernameCheck[i] == username) {
             console.log('Correct')
         } else {
