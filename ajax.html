@@ -29,6 +29,63 @@ $(document).ready(function () {
         color: red;
         display: none;
     }
+    .logInError2 {
+        color: red;
+        display: none;
+    }
+    .backsplash {
+        position: absolute;
+        background-color: lightgrey;
+        width: 600px;
+        height: 600px;
+        top: 50px;
+        left: 450px;
+        border-style: solid;
+        border-width: 3px;
+    }
+    .backsplash-message {
+        z-index: 1;
+        position: absolute;
+        font-size: 100px;
+        left: 620px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        top: 5px;
+    }
+    .username {
+        z-index: 1;
+        position: absolute;
+        left: 580px;
+        top: 380px;
+    }
+    .password {
+        z-index: 1;
+        position: absolute;
+        left: 770px;
+        top: 380px  
+    }
+    .submit {
+        z-index: 1;
+        position: absolute;
+        left: 710px;
+        width: 100px;
+        height: 40px;
+        top: 420px;
+    }
+    body {
+        background-color: lightblue;
+    }
+    .logInError {
+        z-index: 1;
+        position: absolute;
+        left: 630px;
+        top: 480px;
+    }
+    .logInError2 {
+        z-index: 1;
+        position: absolute;
+        left: 630px;
+        top: 480px;
+    }
 </style>
 </head>
 <body>
@@ -38,7 +95,11 @@ $(document).ready(function () {
 <input class = 'submit' type = 'submit'></input> 
 
 <p class = 'logInError'>Username or Password cannot be blank</p>
-    
+<p class = 'logInError2'>Username or Password is incorrect</p>
+<p class = 'backsplash'></p>
+<p class = 'backsplash-message'>Log In</p>
+
+
 <script>
 function loadDoc(username, password) {
     console.log(username)
@@ -65,12 +126,12 @@ function logIn(xml, username, password) {
         passwordCheck = rawPasswordCheck.toString()
         if (usernameCheck === username) {
             if (passwordCheck === password) {
-                console.log('entered')
+                document.querySelector('.logInError2').style.display = 'none';
             } else {
-                console.log('Pass incorrect')
+                document.querySelector('.logInError2').style.display = 'block';
             }
         } else {
-            console.log('Incorrect')
+            document.querySelector('.logInError2').style.display = 'block';
         }
     }
 }
