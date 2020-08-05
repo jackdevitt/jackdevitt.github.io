@@ -129,7 +129,7 @@ $(document).ready(function () {
         font-size: 40px;  
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         top: 400px;
-        left: 600px;
+        left: 800px;
     }
     .logOut-Message {
         color: red;
@@ -176,6 +176,7 @@ function logIn(xml, username, password) {
     var i;
     var xmlDoc = xml.responseXML;
     var user = xmlDoc.getElementsByTagName('USER')
+    var enter = 1
     for (i = 0; i < user.length; i++) {
         rawUsernameCheck = user[i].getElementsByTagName('USERNAME')[0].childNodes[0].nodeValue
         rawPasswordCheck = user[i].getElementsByTagName('PASSWORD')[0].childNodes[0].nodeValue
@@ -185,6 +186,7 @@ function logIn(xml, username, password) {
         passwordCheck = rawPasswordCheck.toString()
         if (usernameCheck === username) {
             if (passwordCheck === password) {
+                enter = 2
                 document.querySelector('.username').style.display = 'none';
                 document.querySelector('.password').style.display = 'none';
                 document.querySelector('.submit').style.display = 'none';
@@ -197,10 +199,14 @@ function logIn(xml, username, password) {
                 funds = user[i].getElementsByTagName('FUNDS')[0].childNodes[0].nodeValue
                 document.querySelector('.fund').textContent = funds
             } else {
-                document.querySelector('.logInError2').style.display = 'block';
+                if (enter == 1) {
+                    document.querySelector('.logInError2').style.display = 'block';
+                }
             }
         } else {
-            document.querySelector('.logInError2').style.display = 'block';
+            if (enter == 1) {
+                document.querySelector('.logInError2').style.display = 'block';
+            }    
         }
     }
 }
