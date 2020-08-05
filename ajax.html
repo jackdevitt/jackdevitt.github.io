@@ -55,10 +55,11 @@ function loadDoc(username, password) {
 function logIn(xml, username, password) {
     var i;
     var xmlDoc = xml.responseXML;
-    var usernameCheck = xmlDoc.getElementsByTagName('USERNAME')
-    console.log(usernameCheck, passwordCheck)
-    var passwordCheck = xmlDoc.getElementsByTagName('PASSWORD')
+    var user = xmlDoc.getElementsByTagName('USER')
     for (i = 0; i < usernameCheck.length; i++) {
+        usernameCheck = user[i].getElementsByTagName('USERNAME')
+        passwordCheck = user[i].getElementsByTagName('PASSWORD')
+        console.log(usernameCheck)
         if (usernameCheck[i] = username) {
             var userInterval = i
             console.log('Correct')
