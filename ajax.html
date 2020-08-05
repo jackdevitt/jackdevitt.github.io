@@ -64,7 +64,11 @@ function logIn(xml, username, password) {
         usernameCheck = rawUsernameCheck.toString()
         passwordCheck = rawPasswordCheck.toString()
         if (usernameCheck === username) {
-            console.log('Correct')
+            if (passwordCheck === password) {
+                console.log('entered')
+            } else {
+                console.log('Pass incorrect')
+            }
         } else {
             console.log('Incorrect')
         }
