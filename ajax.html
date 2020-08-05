@@ -56,12 +56,22 @@ function logIn(xml, username, password) {
     var i;
     var xmlDoc = xml.responseXML;
     var usernameCheck = xmlDoc.getElementsByTagName('Username')
+    var passwordCheck = xmlDoc.getElementsByTagName('Password')
     for (i = 0; i < usernameCheck.length; i++) {
         if (usernameCheck[i] = username) {
-            usernameCorrect = true
-            console.log('Correct')
+            var userInterval = i
+            if (passwordCheck[i] = password) {
+                var passInterval = i
+                if (userInterval == passInterval) {
+                    console.log('.entered')
+                } else {
+                    console.log('Password and Username Don\'t Match')
+                }
+            } else {
+                console.log('Incorrect Password')
+            }   
         } else {
-            console.log('Incorrect')
+            console.log('Incorrect Username')
         }
     }
 }
