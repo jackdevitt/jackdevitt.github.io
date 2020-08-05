@@ -60,8 +60,7 @@ function logIn(xml, username, password) {
         usernameCheck = user[i].getElementsByTagName('USERNAME')[0].childNodes[0].nodeValue
         passwordCheck = user[i].getElementsByTagName('PASSWORD')[0].childNodes[0].nodeValue
         console.log(usernameCheck)
-        if (usernameCheck[i] = username) {
-            var userInterval = i
+        if (usernameCheck[i] == username) {
             console.log('Correct')
         } else {
             console.log('Incorrect')
