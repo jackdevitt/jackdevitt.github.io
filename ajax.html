@@ -47,13 +47,12 @@ function loadDoc() {
             logIn(this);
         }
     };
-    xhttp.open("GET", "ajax_info.xml", true);
+    xhttp.open("GET", "jackdevitt.com/ajax_info.xml", true);
     xhttp.send();
 }
 function logIn(xml) {
     var i;
     var xmlDoc = xml.responseXML;
-    console.log(xmlDoc)
     var usernameCheck = xmlDoc.getElementsByTagName('Username')
 }
 </script>
