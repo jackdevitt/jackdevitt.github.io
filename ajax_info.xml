@@ -1,12 +1,12 @@
-<Catalog>
-    <User>
-        <Username>Happy123</Username>
-        <Password>12345</Password>
-        <Funds>$9999</Funds>
-    </User>
-    <User>
-        <Username>DogLover</Username>
-        <Password>Dog4Life</Password>
-        <Funds>$19863</Funds>
-    </User>
-</Catalog>
+<CATALOG>
+    <USER>
+        <USERNAME>Happy123</USERNAME>
+        <PASSWORD>12345</PASSWORD>
+        <FUNDS>$9999</FUNDS>
+    </USER>
+    <USER>
+        <USERNAME>DogLover</USERNAME>
+        <PASSWORD>Dog4Life</PASSWORD>
+        <FUNDS>$19863</FUNDS>
+    </USER>
+</CATALOG>
