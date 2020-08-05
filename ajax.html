@@ -85,7 +85,7 @@ $(document).ready(function () {
     .logInError2 {
         z-index: 1;
         position: absolute;
-        left: 640px;
+        left: 650px;
         top: 480px;
     }
 </style>
@@ -129,6 +129,7 @@ function logIn(xml, username, password) {
         if (usernameCheck === username) {
             if (passwordCheck === password) {
                 document.querySelector('.logInError2').style.display = 'none';
+                console.log('.WORKING')
             } else {
                 document.querySelector('.logInError2').style.display = 'block';
             }
