@@ -1,282 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>JackDevitt.com New</title>
-<meta charset = 'utf-8'>
-<link rel = "stylesheet" type = "text/css" href = "jackdevittCSS.css"/>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Arena</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Arena</div>
+      </div>
+    </div>
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
 
-<style>
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
 
-@media (max-width: 1000px) {
-    body {
-        height: 800px;
-    }
-}
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/ArenaWeb.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/ArenaWeb.data.gz",
+        frameworkUrl: buildUrl + "/ArenaWeb.framework.js.gz",
+        codeUrl: buildUrl + "/ArenaWeb.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "JDevitt",
+        productName: "Arena",
+        productVersion: "0.1",
+        showBanner: unityShowBanner,
+      };
 
-@media (max-width: 1000px) {
-    .featured-label {
-        position: absolute;
-        top: 180px;
-    }
-}
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
 
-@media (max-width: 1000px) {
-    .app-pig, .app-cal, .app-bud {
-        position: absolute;
-        top: 265px;
-    }
-}
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
 
-@media (max-width: 1000px) {
-    .app-pig, .app-pig-label, .app-pig-click, .app-cal, .app-cal-click, .app-cal-label, .app-bud, .app-bud-click, .app-bud-label {
-      width: 20%;
-      height: 9%;
-    }
-} 
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
 
-@media (max-width: 1000px) {
-    .app-pig, .app-pig-label {
-        position: absolute;
-        left: 15%;
-    }
-}
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
 
-@media (max-width: 1000px) {
-    .app-cal, .app-cal-label {
-        position: absolute;
-        left: 40%;
-    }
-}
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
 
-@media (max-width: 1000px) {
-    .app-bud, .app-bud-label {
-        position: absolute;
-        left: 65%;
-    }
-}
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-@media (max-width: 1000px) {
-    .link-git, .link-gmail  {
-      width: 20%;
-      height: 15%;
-    }
-}
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
 
-@media (max-width: 1000px) {
-    .link-git-label, .link-gmail-label {
-        width: 20%;
-        height: 9%;
-    }
-}
+      loadingBar.style.display = "block";
 
-@media (max-width: 1000px) {
-    .link-git-label, .link-gmail-label {
-        position: absolute;
-        top: 900px;
-    }
-}
-
-
-@media (max-width: 1000px) {
-    .link-git, .link-gmail {
-        position: absolute;
-        top: 680px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .link-gmail-label, .link-gmail {
-        position: absolute;
-        left: 57%;
-    }
-}
-
-@media (max-width: 1000px) {
-    .head {
-      right: -26%;
-      width: 150%;
-      height: 11%;
-    }
-} 
-
-@media (max-width: 1000px) {
-    .app-pig-confirm, .app-cal-confirm, .app-bud-confirm, .link-git-confirm, .link-gmail-confirm {
-        width: 20%;
-        height: 30%;
-    }
-} 
-
-@media (max-width: 1000px) {
-    footer {
-        position: absolute;
-        height: 24.8%;
-        top: 74.8%;
-        scroll-margin-block-end: 74.7%;
-    }
-}
-@media (max-width: 1000px) {
-    .page1, .page2 {
-        position: absolute;
-        top: 100px;
-        width: 10%;
-        height: 10%;
-    }
-}
-
-@media (max-width: 1000px) {
-    .page1 {
-        left: 35%;
-    }
-}
-
-@media (max-width: 1000px) {
-    .page2 {
-        left: 50%;
-    }
-}
-</style>
-
-</head>
-
-<body>
-
-<div class = 'featured-label'>
-    <div class = 'featured' id = 'featured'>Featured Projects</div>
-</div>
-
-<div class = 'head'>
-    <img src = 'images/jackdevittlogodonev3.png' height = '100%' width = '13%' alt = 'JackDevitt'>
-</div>
-
-<div class = 'app-pig'>
-    <button onclick = 'topFunction()' class = 'btn-pig' id = 'btn-pig'><img src = 'images/dice-6.png' width = '100%' height = '100%'></button>
-</div>
-
-<div class = 'app-pig-click'>
-    <img src = 'images/dice-6.png' width = '100%' height = '100%'>
-</div>
-
-<div class = 'app-pig-label'>
-    <p>Dice Game</p>
-</div>
-
-<div class = 'app-pig-confirm'>
-    <p>Are you sure you want to launch?</p>
-    <form method = 'get' action = 'PigGame.html'>
-    <button type = 'submit' class = 'btn-pig-yes' id = 'btn-pig-yes'>Yes</button></form>
-    <button class = 'btn-pig-no' id = 'btn-pig-no'>No</button>
-</div>
-
-<div class = 'app-cal'>
-    <button onclick = 'topFunction()' class = 'btn-cal' id = 'btn-cal'><img src = 'images/Door 1.png' width = '100%' height = '100%'></button>
-</div>
-
-<div class = 'app-cal-label'>
-    <p>The Monty Hall Problem</p>
-</div>
-
-<div class = 'app-cal-click'>
-    <img src = 'images/Door 1.png' width = '100%' height = '100%'>
-</div>
-
-<div class = 'app-cal-confirm'>
-    <p>Are you sure you want to launch?</p>
-    <form method = 'get' action = 'door.html'>
-    <button type = 'submit' class = 'btn-cal-yes' id = 'btn-cal-yes'>Yes</button></form>
-    <button class = 'btn-cal-no' id = 'btn-cal-no'>No</button>
-</div>
-
-<div class = 'app-bud'>
-    <button onclick = 'topFunction()' class = 'btn-bud' id = 'btn-bud'><img src = 'hangman/images/hangman0.png' width = '100%' height = '100%'></button>
-</div>
-
-<div class = 'app-bud-label'>
-    <p><i>Hangman</i></p>
-</div>
-
-<div class = 'app-bud-click'>
-    <img src = 'hangman/images/hangman0.png' width = '100%' height = '100%'>
-</div>
-
-<div class = 'app-bud-confirm'>
-    <p>Are you sure you want to launch?</p>
-    <form method = 'get' action = 'hangman/index.html'>
-    <button type = 'submit' class = 'btn-bud-yes' id = 'btn-bud-yes'>Yes</button></form>
-    <button class = 'btn-bud-no' id = 'btn-bud-no'>No</button>
-</div>
-
-<div class = 'link-label'>
-    <div class = 'link' id = 'link'>Further Links</div>
-</div>
-
-<div class = 'link-git'>
-    <button onclick = 'topFunction()' class = 'btn-git' id = 'btn-git'><img src = 'images/github-logo.png' width = '100%' height = '100%'></button>
-</div>
-
-<div class = 'link-git-label'>
-    <p>Github</p>
-</div>
-
-<div class = 'link-git-click'>
-    <img src = 'images/github-logo.png' width = '100%' height = '100%'>
-</div>
-
-<div class = 'link-git-confirm'>
-    <p>Are you sure you want to launch?</p>
-    <form method = 'get' action = 'https://github.com/jackdevitt/jackdevitt.github.io'>
-    <button type = 'submit' class = 'btn-git-yes' id = 'btn-git-yes'>Yes</button></form>
-    <button class = 'btn-git-no' id = 'btn-git-no'>No</button>
-</div>
-
-<div class = 'link-gmail'>
-    <button onclick = 'topFunction()' class = 'btn-git' id = 'btn-git'><img src = 'images/gmail-logo.jpg' width = '100%' height = '100%'></button>
-</div>
-
-<div class = 'link-gmail-label'>
-    <p>Gmail</p>
-</div>
-
-<div class = 'link-gmail-click'>
-    <img src = 'images/gmail-logo.jpg' width = '100%' height = '100%'>
-</div>
-
-<div class = 'link-gmail-confirm'>
-    <p>Are you sure you want to launch?</p>
-    <form method = 'get' action = 'https://aboutme.google.com/?hl=en'>
-    <button type = 'submit' class = 'btn-gmail-yes' id = 'btn-gmail-yes'>Yes</button></form>
-    <button class = 'btn-gmail-no' id = 'btn-gmail-no'>No</button>
-</div>
-
-<div class = 'aboutme'>
-    <div class = 'aboutmelabel' id = 'aboutmelabel'>About Me</div>
-</div>
-
-<div class = 'aboutme-label'>
-    <p>I am 8th grader who can code in...</p>
-    <p>-Javascript</p>
-    <p>-HTML</p>
-    <p>-CSS</p>
-    <p>-Python</p>
-    <p>-Block-Based Code</p>
-    <p>I made this website as an exercise in coding skills and to practice working with large projects. As of 10/28/19, I am working on becoming Javascript certified through video lectures available online. I know a great deal about coding already from coding classes at Richmond's Math Science Innovation Center, CODERVA, and through my middle school.</p>
-</div>
-
-<div class = 'btn-top'>
-    <button onclick = 'topFunction()' class = 'btn-top' id = 'btn-top'>Back to top</button>
-</div>
-
-<div class = 'page1'>
-    <button class = 'btn-page1' id = 'btn-page1'>Page 1</button>
-</div>
-    
-<div class = 'page2'>
-    <button class = 'btn-page2' id = 'btn-page2'>Page 2</button>
-</div>
-
-<footer>
-
-</footer>
-
-<script src = 'jackdevittJS.js'></script>
-</body>
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
 </html>
